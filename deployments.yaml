@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:5ea2af2927d90703776d344b7b0bf58c2c1289c2
+          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:fb07a70d49e9e0d0ac146638c2c11b3f1f039894
           env:
           - name: REACT_APP_SERVER_URL
             value: http://54.179.44.235:30008
