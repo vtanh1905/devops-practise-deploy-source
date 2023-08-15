@@ -30,15 +30,18 @@ spec:
 # kind: Ingress
 # metadata:
 #   namespace: production
-#   name: ingress-nginx
+#   name: ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /
 # spec:
+#   ingressClassName: nginx
 #   rules:
-#     - http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: service-frontend
-#                 port:
-#                   number: 30007
+#   - http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: frontend
+#             port:
+#               number: 80

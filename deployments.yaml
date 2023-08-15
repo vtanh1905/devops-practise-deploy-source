@@ -41,5 +41,8 @@ spec:
       containers:
         - name: backend
           image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/backend:5895062473039c8e3dd697923bf757954b54bb63
+          env:
+          - name: MONGODB_URI
+            value: mongodb+srv://linhlnq:Qcy4YnJEOPuXJlcL@taskon.nq3kfin.mongodb.net/taskon
           ports:
             - containerPort: 3000
