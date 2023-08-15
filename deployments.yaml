@@ -17,7 +17,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:ac633d95d838ff62d6a837a5a067c19bed311874
+          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:423b82e9cc9d76b4553d850344aca93059225782
+          env:
+          - name: REACT_APP_SERVER_URL
+            value: http://54.179.44.235:30008
           ports:
             - containerPort: 80
 ---
@@ -40,7 +43,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/backend:5895062473039c8e3dd697923bf757954b54bb63
+          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/backend:236b41e76e7d29b88d7e358b81c7b5a85b9e9a86
           env:
           - name: MONGODB_URI
             value: mongodb+srv://linhlnq:Qcy4YnJEOPuXJlcL@taskon.nq3kfin.mongodb.net/taskon
