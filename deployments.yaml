@@ -17,12 +17,12 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:fb07a70d49e9e0d0ac146638c2c11b3f1f039894
+          image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:7819b1777e42fd0a5eb58e490eaf268db9d6b730
           env:
           - name: REACT_APP_SERVER_URL
             value: http://54.179.44.235:30008
           ports:
-            - containerPort: 80
+            - containerPort: 3000
 ---
 apiVersion: apps/v1
 kind: Deployment
