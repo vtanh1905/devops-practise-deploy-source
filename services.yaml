@@ -26,19 +26,19 @@ spec:
       targetPort: 3000
       nodePort: 30008
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  namespace: production
-  name: ingress-nginx
-spec:
-  rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: service-frontend
-                port:
-                  number: 30007
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   namespace: production
+#   name: ingress-nginx
+# spec:
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: service-frontend
+#                 port:
+#                   number: 30007
