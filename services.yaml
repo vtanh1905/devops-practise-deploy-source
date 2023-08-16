@@ -34,7 +34,8 @@ metadata:
   name: ingress
 spec:
   rules:
-  - http:
+  - host: vtanh1905.com
+    http:
       paths:
       - path: /frontend
         pathType: Prefix
