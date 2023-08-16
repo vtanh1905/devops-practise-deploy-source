@@ -20,7 +20,7 @@ spec:
           image: 959149964983.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:7819b1777e42fd0a5eb58e490eaf268db9d6b730
           env:
             - name: REACT_APP_SERVER_URL
-              value: http://service-backend
+              value: http://54.255.202.138:30008
           ports:
             - containerPort: 3000
 ---

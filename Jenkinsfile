@@ -19,11 +19,5 @@ pipeline {
                 sh 'kubectl apply -f services.yaml'
             }
         }
-        
-        stage('MongoDB') {
-            steps {
-                sh 'kubectl apply -f mongodb.yaml'
-            }
-        }
     }
 }
