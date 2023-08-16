@@ -2,6 +2,7 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
+  namespace: production
   name: mongo-sc
 provisioner: kubernetes.io/aws-ebs
 parameters:
@@ -12,6 +13,7 @@ volumeBindingMode: WaitForFirstConsumer
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: production
   name: mongo
   labels:
     name: mongo
@@ -27,6 +29,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: production
   name: mongo-config
 data:
   MONGODB_INITDB_ROOT_USERNAME: "user"
@@ -34,15 +37,16 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
+  namespace: production
   name: mongo-secrets
 type: Opaque
 data:
-  MONGODB_INITDB_ROOT_PASSWORD: 123123
-
+  MONGODB_INITDB_ROOT_PASSWORD: cGFzc3dvcmQK
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
+  namespace: production
   name: mongo
 spec:
   selector:

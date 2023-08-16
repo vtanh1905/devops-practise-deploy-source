@@ -20,5 +20,10 @@ pipeline {
             }
         }
         
+        stage('MongoDB') {
+            steps {
+                sh 'kubectl apply -f mongodb.yaml'
+            }
+        }
     }
 }
